@@ -15,22 +15,27 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    <div class="flex">
+                <div class="w-56 bg-gray-200 shadow-lg h-screen">
+                    <img src="https://smc.edu.np/wp-content/uploads/2023/11/smc-logo-circle.png" class="w-8/12 mx-auto mt-5" alt="">
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+                <div class ="mt-5">
+                <a href="" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Dashboard</a>
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
+                <a href="" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Category</a>
+
+                <a href="" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Products</a>
+
+                <a href="" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Users</a>
+
+                <a href="" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Orders</a>
+
+                <a href="" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Logout</a>
+            </div>
+                </div>
+                <div class="p-4 flex-1">
+                    @yield('content')
+                </div>
+            </div>
     </body>
 </html>

@@ -12,10 +12,10 @@
     <nav class="flex sticky top-0 justify-between shadow px-20 py-4 items-center bg-slate-300 ">
        <img src="https://smc.edu.np/wp-content/uploads/2023/11/smc-logo-circle.png" class="w-24" alt=""> 
        <div>
-        <a class="mx-2" href="" >Home</a>
-        <a class="mx-2" href="" >About</a>
-        <a class="mx-2" href="" >Contact</a>
-        <a class="mx-2" href="" >Login</a>
+        <a class="mx-2" href="/" >Home</a>
+        <a class="mx-2" href="/about" >About</a>
+        <a class="mx-2" href="/contact" >Contact</a>
+        <a class="mx-2" href="/login" >Login</a>
        </div>
     </nav>
    @yield('content')
