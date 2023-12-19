@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -21,8 +22,10 @@ Route::get('/about', [PagesController::class, 'about']);
 
 Route::get('/contact', [PagesController::class, 'contact']);
 
+Route::get('/category', [CategoryController::class, 'index'])->middleware('auth')->name('category.index');
+
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view ('dashboard');
 })->middleware (['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
