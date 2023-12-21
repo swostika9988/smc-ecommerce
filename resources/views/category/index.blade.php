@@ -4,7 +4,7 @@
 <hr class="h-1 bg-violet-500">
 
 <div class="text-right my-5">
-<a href="" class="bg-blue-500 text-white px-4 py-2 rounded">Add Category</a>
+<a href="{{ route('category.create')}}" class="bg-green-800 text-white px-4 py-2 rounded">Add Category</a>
 </div>
 
 <table class="mt-5 w-full text-center">

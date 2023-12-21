@@ -24,6 +24,8 @@ Route::get('/contact', [PagesController::class, 'contact']);
 
 Route::get('/category', [CategoryController::class, 'index'])->middleware('auth')->name('category.index');
 
+Route::get('/category/create', [CategoryController::class, 'create'])->middleware('auth')->name('category.create');
+
 Route::get('/dashboard', function () {
     return view ('dashboard');
 })->middleware (['auth', 'verified'])->name('dashboard');
