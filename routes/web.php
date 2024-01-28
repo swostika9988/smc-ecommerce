@@ -26,6 +26,10 @@ Route::get('/category', [CategoryController::class, 'index'])->middleware('auth'
 
 Route::get('/category/create', [CategoryController::class, 'create'])->middleware('auth')->name('category.create');
 
+Route::post('/category/store', [CategoryController::class, 'store'])->middleware('auth')->name('category.store');
+Route::get('/category/{id}/edit', [CategoryController::class, 'edit'])->middleware('auth')->name('category.edit');
+Route::get('/category/{id}/update',[CategoryController::class,'update'])->middleware('auth')->name('category.update');
+
 Route::get('/dashboard', function () {
     return view ('dashboard');
 })->middleware (['auth', 'verified'])->name('dashboard');
