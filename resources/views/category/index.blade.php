@@ -21,7 +21,7 @@
         <td class="border p-2 border-gray-300">{{$category->categoryname}}</td>
         <td class="border p-2 border-gray-300">
         <a  class="bg-blue-600 text-white px-2 py-1 rounded mx-1"  href="{{route('category.edit',$category->id)}}">Edit</a>
-        <a href="" class="bg-red-600 text-white px-2 py-1 rounded mx-1" href="">Delete</a>
+        <a href="{{route('category.delete',$category->id)}}" onclick="return confirm('Are you sure to delete?');" class="bg-red-600 text-white px-2 py-1 rounded mx-1" >Delete</a>
     </tr>
     @endforeach
     
