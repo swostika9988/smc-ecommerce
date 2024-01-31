@@ -1,4 +1,3 @@
-Samu Sharma
 @extends('layouts.app')
 @section('content')
 <h2 class="font-bold text-3xl text-blue-800">Edit Category</h2>

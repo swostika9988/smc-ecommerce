@@ -24,7 +24,7 @@ class CategoryController extends Controller
             'priority' => 'required|numeric',
         ]); 
         Category::create($data);
-        return redirect (route('category.index'));
+        return redirect (route('category.index'))->with('success', 'Category Added Successfully');
     }
     public function edit($id){
         $category = Category::findOrFail($id);
@@ -39,12 +39,12 @@ class CategoryController extends Controller
     ]);
     $category = Category::findOrFail($id);
     $category->update($data);
-    return redirect(route('category.index'));
+    return redirect(route('category.index'))->with('success', 'Category Updated Successfully');
 }
 public function delete($id)
 {
     $category = Category::find($id);
     $category->delete();
-    return redirect(route('category.index'));
+    return redirect(route('category.index'))->with('success', 'Category Deleted Successfully');
 }
 }
