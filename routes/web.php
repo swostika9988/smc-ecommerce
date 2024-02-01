@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,15 +23,27 @@ Route::get('/about', [PagesController::class, 'about']);
 
 Route::get('/contact', [PagesController::class, 'contact']);
 
-Route::get('/category', [CategoryController::class, 'index'])->middleware('auth')->name('category.index');
+Route::middleware('auth')->group(function(){
+    //category
+    Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
 
-Route::get('/category/create', [CategoryController::class, 'create'])->middleware('auth')->name('category.create');
-
-Route::post('/category/store', [CategoryController::class, 'store'])->middleware('auth')->name('category.store');
-Route::get('/category/{id}/edit', [CategoryController::class, 'edit'])->middleware('auth')->name('category.edit');
-Route::post('/category/{id}/update',[CategoryController::class,'update'])->middleware('auth')->name('category.update');
-Route::get('/category/{id}/delete',[CategoryController::class,'delete'])->middleware('auth')->name('category.delete');
-
+    Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+    
+    Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
+    Route::get('/category/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
+    Route::post('/category/{id}/update',[CategoryController::class,'update'])->name('category.update');
+    Route::get('/category/{id}/delete',[CategoryController::class,'delete'])->name('category.delete');
+    
+    //product
+    Route::get('/product',[ProductController::class, 'index'])->name('product.index');
+    Route::get('/product/create',[ProductController::class, 'create'])->name('product.create');
+    Route::post('/product/store',[ProductController::class, 'store'])->name('product.store');
+    Route::get('/product/{id}/edit',[ProductController::class, 'edit'])->name('product.store');
+    Route::put('/product/{id}/update',[ProductController::class, 'update'])->name('product.update');
+    Route::get('/product/{id}/delete',[ProductController::class, 'delete'])->name('product.delete');
+    
+});
+//dashboard
 Route::get('/dashboard', function () {
     return view ('dashboard');
 })->middleware (['auth', 'verified'])->name('dashboard');
