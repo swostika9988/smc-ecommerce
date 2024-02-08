@@ -10,8 +10,8 @@ class ProductController extends Controller
 {
     public function index ()
     {
-return view('product.index');
-    }
+        $products = Product::latest()->get();
+        return view('product.index',compact('products'));    }
     public function create () 
     {
         $categories = Category::orderBy('priority')->get();
@@ -26,7 +26,7 @@ return view('product.index');
         'description' => 'required',
         'photopath' => 'required|image',
         'stock' => 'required',
-        'statuts' => 'required',
+        'status' => 'required',
      ]);
      if($request->hasFile('photopath')){
         $file = $request->photopath;
