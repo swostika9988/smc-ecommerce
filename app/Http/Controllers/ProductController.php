@@ -41,7 +41,9 @@ class ProductController extends Controller
     }
     public function edit ($id)
     {
-
+      $product= product::find($id);
+      $categories = Category::orderBy('priority')->get();
+      return view('product.edit',compact('product','categories'));
     } 
     public function update(Request $request, $id)
     {

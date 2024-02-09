@@ -36,7 +36,7 @@
     @enderror
    <select name="status" class="block w-full p-2 rounded my-2">
     <option value="Available">Available</option>
-    <option value="UnAvailable">UnAvailable</option>
+    <option value="Unavailable">Unavailable</option>
    </select>
 
    <input type="file" name="photopath" class="block w-full p-2 rounded my-2">

@@ -21,7 +21,7 @@
 
         @foreach($products as $product)
         <tr>
-            <td class="border p-2">1</td>
+            <td class="border p-2">{{$loop->iteration}}</td>
             <td class="border p-2">{{$product->category->categoryname}}</td>
             <td class="border p-2">{{$product->name}}</td>
             <td class="border p-2">{{$product->description}}</td>
@@ -32,7 +32,7 @@
                 <img src="{{asset('images/products/'.$product->photopath)}}" class="h-32" alt="">
             </td>
             <td class="border p-2">
-                <a href="" class="bg-blue-600 text-white px-3 py-1 rounded">Edit</a>
+                <a href="{{route('product.edit',$product->id)}}" class="bg-blue-600 text-white px-3 py-1 rounded">Edit</a>
                 <a href="" class="bg-red-600 text-white px-3 py-1 rounded">Delete</a>
             </td>
         </tr>
