@@ -9,9 +9,9 @@
 
 </head>
 <body>
-    <nav class="flex sticky top-0 justify-between shadow px-20 py-4 items-center bg-slate-300 ">
-       <img src="https://smc.edu.np/wp-content/uploads/2023/11/smc-logo-circle.png" class="w-24" alt=""> 
-       <div>
+    <nav class="flex sticky top-0 justify-between shadow px-20 py-4 items-center bg-orange-500 ">
+       <img src="https://icms-image.slatic.net/images/ims-web/e6ac6883-1158-4663-bda4-df5a1aa066e5.png" class="w-24" alt=""> 
+       <div class="text-white font-bold">
         <a class="mx-2" href="/" >Home</a>
         <a class="mx-2" href="/about" >About</a>
         <a class="mx-2" href="/contact" >Contact</a>
