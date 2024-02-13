@@ -31,7 +31,10 @@
 
                 <a href="" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Orders</a>
 
-                <a href="" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Logout</a>
+                <form action="{{route('logout')}}" method="POST" class="w-full overflow-hidden">
+                @csrf
+                <button type="submit" class="block w-full text-left font-bold px-2 py-3 text-lg border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Logout</button>
+                </form>
             </div>
                 </div>
                 <div class="p-4 flex-1">
