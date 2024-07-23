@@ -7,7 +7,7 @@
                         <div class="grid items-center ">
                             <p>Product: {{$cart->product_id}}</p>
                             <p>Qty: {{$cart->quantity}}</p>
-                            <p>Price: {{$cart->price}}</p>
+                            <p>Price: {{$cart->product->price}}</p>
                             <button id="payment-button" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow ">Pay Now</button>
                         </div>
                 </div>

@@ -18,30 +18,31 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="font-sans antialiased">
-    <div class="flex">
-                <div class="w-56 bg-gray-200 shadow-lg h-screen">
-                    <img src="https://smc.edu.np/wp-content/uploads/2023/11/smc-logo-circle.png" class="w-8/12 mx-auto mt-5" alt="">
-
-                <div class ="mt-5">
-                <a href="{{route('dashboard')}}" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Dashboard</a>
-
-                <a href="{{route('category.index')}}" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Category</a>
-
-                <a href="{{route('product.index')}}" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Products</a>
-
-                <a href="" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Users</a>
-
-                <a href="" class="block px-2 py-3 text-lg font-bold border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Orders</a>
-
-                <form action="{{route('logout')}}" method="POST" class="w-full overflow-hidden">
-                @csrf
-                <button type="submit" class="block w-full text-left font-bold px-2 py-3 text-lg border-l-4 border-transparent m-2 transition-border duration-300 ease-in-out hover:border-blue-600 hover:bg-gray-300">Logout</button>
-                </form>
-            </div>
-                </div>
-                <div class="p-4 flex-1">
-                    @yield('content')
+        <div class="flex h-fullscreen">
+            <div class="w-56 bg-gradient-to-b from-gray-400 to-gray-600 text-white shadow-lg min-h-screen">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNY4VeE2fEhUNnkaTdigfqSpe6V1_5L9XXzg&usqp=CAU" class="w-8/12 mx-auto mt-5 rounded-full" alt="Logo">
+        
+                <div class="mt-5">
+                    <a href="{{route('dashboard')}}" class="block px-4 py-3 text-lg font-bold border-l-4 border-transparent transition-all duration-300 hover:border-red-600 hover:bg-gray-700">Dashboard</a>
+        
+                    <a href="{{route('category.index')}}" class="block px-4 py-3 text-lg font-bold border-l-4 border-transparent transition-all duration-300 hover:border-red-600 hover:bg-gray-700">Category</a>
+        
+                    <a href="{{route('product.index')}}" class="block px-4 py-3 text-lg font-bold border-l-4 border-transparent transition-all duration-300 hover:border-red-600 hover:bg-gray-700">Products</a>
+        
+                    <a href="#" class="block px-4 py-3 text-lg font-bold border-l-4 border-transparent transition-all duration-300 hover:border-red-600 hover:bg-gray-700">Users</a>
+        
+                    <a href="#" class="block px-4 py-3 text-lg font-bold border-l-4 border-transparent transition-all duration-300 hover:border-red-600 hover:bg-gray-700">Orders</a>
+        
+                    <form action="{{route('logout')}}" method="POST" class="w-full overflow-hidden">
+                        @csrf
+                        <button type="submit" class="block w-full text-left font-bold px-4 py-3 text-lg border-l-4 border-transparent transition-all duration-300 hover:border-red-600 hover:bg-gray-700">Logout</button>
+                    </form>
                 </div>
             </div>
-    </body>
+            <div class="p-4 flex-1">
+                @yield('content')
+            </div>
+        </div>
+        
+    </body>        
 </html>

@@ -27,7 +27,7 @@
         </script>
         @endif
     <nav class="flex sticky top-0 justify-between shadow px-20 py-4 items-center bg-orange-500 ">
-       <img src="https://icms-image.slatic.net/images/ims-web/e6ac6883-1158-4663-bda4-df5a1aa066e5.png" class="w-24" alt=""> 
+       <img src="https://previews.123rf.com/images/vectorgalaxy/vectorgalaxy1805/vectorgalaxy180500583/101156949-mini-mart-logo-isolated-on-white-background-for-your-web-and-mobile-app-design-colorful-vector-icon.jpg" class="w-24 rounded-lg" alt=""> 
        <div class="text-white font-bold">
         <a class="mx-2" href="/" >Home</a>
         @php
@@ -49,12 +49,12 @@
        </div>
     </nav>
    @yield('content')
-    <footer>
-        <div class="bg-blue-800 text-white text-center text-sm py-2">
-<p>Copyright &copy: 2023.All rights reserved.
-    SMC-Ecommerce
-</p>
-        </div>
-    </footer>
+   <footer>
+    <div class="bg-gradient-to-r from-blue-800 to-indigo-700 text-white text-center text-sm py-4">
+        <p class="font-bold text-lg mb-2">© 2023. All rights reserved.</p>
+        <p class="text-gray-300">Mini shop-Ecommerce</p>
+    </div>
+</footer>
+
 </body>
 </html>
