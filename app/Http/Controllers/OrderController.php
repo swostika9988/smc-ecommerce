@@ -21,4 +21,10 @@ class OrderController extends Controller
         $cart->delete();
         return redirect('/cart')->with('success', 'Order placed successfully');
     } 
+
+    public function index()
+    {
+        $Orders = Order::all();
+        return view('Order.index',compact('Orders'));
+    }
 }

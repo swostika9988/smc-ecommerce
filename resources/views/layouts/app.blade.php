@@ -29,7 +29,7 @@
         
                     <a href="{{route('product.index')}}" class="block px-4 py-3 text-lg font-bold border-l-4 border-transparent transition-all duration-300 hover:border-red-600 hover:bg-gray-700">Products</a>
         
-                    <a href="#" class="block px-4 py-3 text-lg font-bold border-l-4 border-transparent transition-all duration-300 hover:border-red-600 hover:bg-gray-700">Users</a>
+                    <a href="{{route('user.index')}}" class="block px-4 py-3 text-lg font-bold border-l-4 border-transparent transition-all duration-300 hover:border-red-600 hover:bg-gray-700">Users</a>
         
                     <a href="#" class="block px-4 py-3 text-lg font-bold border-l-4 border-transparent transition-all duration-300 hover:border-red-600 hover:bg-gray-700">Orders</a>
         
