@@ -58,7 +58,7 @@ Route::middleware('auth')->group(function(){
     //User
     Route::get('/user',[UserController::class,'index'])->name('user.index');
     //order
-    Route::get('/orders',[UserController::class,'index'])->name('order.index');
+    Route::get('/orders',[OrderController::class,'index'])->name('order.index');
 
 });
 //dashboard
