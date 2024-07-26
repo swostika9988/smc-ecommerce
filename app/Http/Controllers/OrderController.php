@@ -27,4 +27,11 @@ class OrderController extends Controller
         $orders = Order::all();
         return view('order.index',compact('orders'));
     }
+    public function status($id, $status){
+        $order = Order::find($id);
+        $order->status = $status;
+        $order->save();
+        return redirect()->back()->with('success', 'Order is now'.$status);
+
+    }
 }
