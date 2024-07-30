@@ -10,6 +10,10 @@
 <div class="mb-5">
     <input type="password" name="password" placeholder="Enter Password" class="w-full p-2 border rounded">
 </div>
+<div class="my-3 text-right text-blue-600">
+<a href="{{route('password.request')}}">Forget Password?</a>
+
+</div>
 <div class="mb-5">
     <button type="submit" class="w-full bg-orange-600 text-white p-2 rounded">Login</button>
 </div>
