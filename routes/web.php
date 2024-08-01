@@ -26,6 +26,8 @@ Route::get('/', [PagesController::class, 'home']) ;
 Route::get('/about', [PagesController::class, 'about']);
 
 Route::get('/contact', [PagesController::class, 'contact']);
+Route::get('/categoryproduct/{catid}',[PagesController::class,'categoryproduct'])->name('categoryproduct');
+
 Route::get('/{id}/viewproduct', [PagesController::class, 'viewproduct'])->name('viewproduct');
 Route::get('/cart', [CartController::class, 'index'])->middleware('auth')->name('cart');
 Route::get('/checkout/{id}', [CartController::class, 'checkout'])->middleware('auth')->name('checkout');
