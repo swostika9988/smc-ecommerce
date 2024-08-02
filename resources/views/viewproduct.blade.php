@@ -25,4 +25,17 @@
         <h2 class="font-bold text-3xl">Product Description</h2>
         <p class="text-gray-700">{{$product->description}}</p>
     </div>
-@endsection
+
+    <h2 class="mt-10 text-2xl font-bold px-24">Related Products</h2>
+    <diV class="grid grid-cols-4 gap-10 pb-10 px-24">
+        @foreach($relatedproducts as $product)
+        <div class="border p-4">
+            <img src="{{asset('images/products/'.$product->photopath)}}" class="w-full h-32 " alt="">
+            <h2 class="text-xl font-bold my-2">{{$product->name}}</h2>
+            <p class="text-gray-700 line-clamp-2 ">{{$product->description}}</p>
+            <p class="text-gray-700 font-bold mt-2">Rs {{$product->price}}</p>
+            <a href="{{route('viewproduct',$product->id)}}" class="bg-blue-700 text-white py-2 px-4 mt-2 inline-block rounded">View</a>
+        </div>
+    @endforeach
+    </diV>
+    @endsection
