@@ -26,7 +26,7 @@
     
     <div class="bg-gray-500 py-5 px-4 flex justify-between text-white rounded-lg shadow-orange-100">
         <p class="text-xl ">Total Sales</p>
-        <h2 class="text-5xl font-bold">{{$pendingorders}}</h2>
+        <h2 class="text-5xl font-bold">{{$totalsales}}</h2>
        </div>
     
 </div>

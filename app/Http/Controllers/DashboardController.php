@@ -15,6 +15,13 @@ class DashboardController extends Controller
         $pendingorders = Order::where('status','Pending')->count();
         $processingorders = Order::where('status','Processing')->count();
         $deliveredorders = Order::where('status','Delivered')->count();
-       return view('dashboard',compact('totalproducts','totalorders','pendingorders','processingorders','deliveredorders'));
+        $totalsales = 0;
+        $totalsold = Order::where('status','Delivered')->get();
+        foreach($totalsold as $order)
+        {
+            $total = $order->price * $order->quantity;
+            $totalsales += $total;
+        }
+       return view('dashboard',compact('totalproducts','totalorders','pendingorders','processingorders','deliveredorders','totalsales'));
     }
 }
