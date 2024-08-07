@@ -29,7 +29,7 @@
     <nav class="flex sticky top-0 justify-between shadow px-20 py-4 items-center bg-orange-500 ">
        <img src="https://previews.123rf.com/images/vectorgalaxy/vectorgalaxy1805/vectorgalaxy180500583/101156949-mini-mart-logo-isolated-on-white-background-for-your-web-and-mobile-app-design-colorful-vector-icon.jpg" class="w-24 rounded-lg" alt=""> 
        <form action="{{route('search')}}" method="GET" class="flex-1 w-full px-10 mt-5 flex items-center gap-4">
-        <input type="text" class="w-full block rounded-lg" placeholder="Search any Product" name="search" value="{{request('search')}}" minlength="2" required>
+        <input type="search" class="w-full block rounded-lg" placeholder="Search any Product" name="search" value="{{request('search')}}" minlength="2" required>
         <button class="bg-blue-600 text-white px-3 py-2 rounded-lg">Search</button>
     </form>
        <div class="text-white font-bold">
@@ -55,7 +55,7 @@
    @yield('content')
    <footer>
     <div class="bg-gradient-to-r from-blue-800 to-indigo-700 text-white text-center text-sm py-4">
-        <p class="font-bold text-lg mb-2">© 2023. All rights reserved.</p>
+        <p class="font-bold text-lg mb-2">© 2024. All rights reserved.</p>
         <p class="text-gray-300">Mini shop-Ecommerce</p>
     </div>
 </footer>
