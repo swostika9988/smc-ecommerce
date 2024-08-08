@@ -55,8 +55,7 @@
    @yield('content')
    <footer>
     <div class="bg-gradient-to-r from-blue-800 to-indigo-700 text-white text-center text-sm py-4">
-        <p class="font-bold text-lg mb-2">© 2024. All rights reserved.</p>
-        <p class="text-gray-300">Mini shop-Ecommerce</p>
+        <p>Copyright &copy; {{now()->year}}. All rights reserved. SMC Ecommerce</p>
     </div>
 </footer>
 

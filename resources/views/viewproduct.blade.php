@@ -16,9 +16,9 @@
             </form>
         </div>
         <div>
-            <p class="text-gray-700 my-5">Free Delivery</p>
-            <p class="text-gray-700 my-5">7 Days Return Policy</p>
-            <p class="text-gray-700 my-5">Cash on Delivery</p>
+            <p class="text-gray-700 my-5"><i class="ri-truck-fill"></i>Free Delivery</p>
+            <p class="text-gray-700 my-5"><i class="ri-history-line"></i>7 Days Return Policy</p>
+            <p class="text-gray-700 my-5"><i class="ri-cash-fill"></i>Cash on Delivery</p>
         </div>
     </div>
     <div class="px-24">
