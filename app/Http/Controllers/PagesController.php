@@ -32,7 +32,7 @@ class PagesController extends Controller
     public function categoryproduct($catid)
     {
         $category = Category::find($catid);
-        $products = Product::where('category_id',$catid)->get();
+        $products = Product::where('category_id',$catid)->paginate(16);
         return view('categoryproduct',compact('products','category'));
     }
     public function search(Request $request)

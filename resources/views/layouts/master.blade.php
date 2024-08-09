@@ -26,7 +26,7 @@
             $('#message').delay(1500).slideUp(500);
         </script>
         @endif
-    <nav class="flex sticky top-0 justify-between shadow px-20 py-4 items-center bg-orange-500 ">
+    <nav class="flex sticky top-0 justify-between shadow px-20 py-4 items-center bg-orange-500 z-50">
        <img src="https://previews.123rf.com/images/vectorgalaxy/vectorgalaxy1805/vectorgalaxy180500583/101156949-mini-mart-logo-isolated-on-white-background-for-your-web-and-mobile-app-design-colorful-vector-icon.jpg" class="w-24 rounded-lg" alt=""> 
        <form action="{{route('search')}}" method="GET" class="flex-1 w-full px-10 mt-5 flex items-center gap-4">
         <input type="search" class="w-full block rounded-lg" placeholder="Search any Product" name="search" value="{{request('search')}}" minlength="2" required>
